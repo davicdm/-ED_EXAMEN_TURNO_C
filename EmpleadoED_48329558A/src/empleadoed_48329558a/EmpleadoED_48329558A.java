@@ -1,22 +1,39 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package empleadoed_48329558a;
 import java.util.*;
 /**
- *
- * @author Davinia
+ *EJERCICIO PRÁCTICO EXAMEN EVAL 1ED
+ * @author Davinia Francés 48329558A
+ * @version 1.0
  */
 public class EmpleadoED_48329558A {
+    
+ /**
+   * @param factor_hora_extra
+   * @param nombre completo
+   * @param salarioBase
+   */    
     static final double FACTOR_HORA_EXTRA = 1.2;
     private String nombreCompleto, dni;
     private double salarioBasePorHora = 10.56;
+/**
+ * 
+ * @param nombre completo en mayúsculas
+ * @param dni 
+ */  
+    
     public EmpleadoED_48329558A(String nombreCompleto, String dni) {
     this.nombreCompleto = nombreCompleto;
     this.dni = dni;
  }
+
+/**
+ * Calcula el salario bruto mensual en función del salario base por hora y las horas extras.
+ * @param precio por hora de la hora extra se determina con la
+constante FACTOR_HORA_EXTRA
+ * @param número de horas extra dedicadas redondeado a la baja (entero)
+ * @return el salario bruto mensual en euros con dos decimales
+ */
     public double getSalarioEsteMes(int horasExtra) {
     double cantidadExtra, salarioFinal;
     cantidadExtra = horasExtra * this.salarioBasePorHora *
